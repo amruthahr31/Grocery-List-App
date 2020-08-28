@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Grocery-List-App"
+    }
+  },
+  "defaultProject": "Grocery-List-App",
+  "cli": {
+    "analytics": "328407bd-b1a7-4995-883a-b66d815a794c"
+  }
 }
