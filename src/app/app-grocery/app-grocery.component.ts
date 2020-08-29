@@ -13,9 +13,18 @@ export class AppGroceryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick(){
+  onClickAdd(){
   this.tasks.push({name: this.task});
   this.task = '';
 }
 
+  onClickReset() {
+    this.tasks.splice(0, this.tasks.length);
+    this.task = "";
+  }
+  
+  onClickRemove(){
+    this.tasks.pop();
+    
+  }
 }
