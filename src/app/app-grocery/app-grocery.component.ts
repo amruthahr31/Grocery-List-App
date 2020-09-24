@@ -8,23 +8,42 @@ import { Component, OnInit } from '@angular/core';
 export class AppGroceryComponent implements OnInit {
   task: string;
   tasks = [];
+  pos: number;
+  taskitem: string;
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
   onClickAdd(){
   this.tasks.push({name: this.task});
   this.task = '';
-}
+  }
+  
+  onClickRemoveItem(item) {
+    console.log("item:", item);
+    let index = this.tasks.findIndex((listitem) => listitem.name === item);
+    console.log("pos", index);
+    this.tasks.splice(index, 1);
+    
+  }
 
   onClickReset() {
     this.tasks.splice(0, this.tasks.length);
     this.task = "";
   }
   
-  onClickRemove(){
-    this.tasks.pop();
-    
+  onClickEditItem(item) {
+    console.log("item:", item);
+    let index = this.tasks.findIndex((listitem) => listitem.name === item);
+    console.log("task:", this.task);
+   /* 
+    if (this.task !== '') {
+      this.tasks[index].name = this.task;
+    }
+    */
+   
+
   }
 }
