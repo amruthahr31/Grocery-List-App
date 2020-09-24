@@ -34,16 +34,5 @@ export class AppGroceryComponent implements OnInit {
     this.task = "";
   }
   
-  onClickEditItem(item) {
-    console.log("item:", item);
-    let index = this.tasks.findIndex((listitem) => listitem.name === item);
-    console.log("task:", this.task);
-   /* 
-    if (this.task !== '') {
-      this.tasks[index].name = this.task;
-    }
-    */
-   
 
-  }
 }
